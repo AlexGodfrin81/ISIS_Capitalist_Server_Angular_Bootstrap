@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<world
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='jaxb/Classes/XmlSchema.xsd'>
+    <name>Summoners War</name>
+    <logo>summoners_war.jpg</logo>
+    <money>0.0</money>
+    <score>0.0</score>
+    <totalangels>0.0</totalangels>
+    <activeangels>0.0</activeangels>
+    <angelbonus>0</angelbonus>
+    <lastupdate>0.0</lastupdate>
+    <products>
+        <product>
+            <id>1</id>
+            <name>Cerbère</name>
+            <logo>cerbere.jpg</logo>
+            <cout>4.0</cout>
+            <croissance>1.07</croissance>
+            <revenu>1.00</revenu>
+            <vitesse>500</vitesse>
+            <quantite>1</quantite>
+            <timeleft>500</timeleft>
+            <managerUnlocked>false</managerUnlocked>
+            <palliers>
+                <pallier>
+                    <name>pallier1_cerbere</name>
+                    <logo>pallier1_cerbere.jpg</logo>
+                    <seuil>10.00</seuil>
+                    <idcible>1</idcible>
+                    <ratio>2</ratio>
+                    <typeratio>gain</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>pallier2_cerbere</name>
+                    <logo>pallier2_cerbere.jpg</logo>
+                    <seuil>25.00</seuil>
+                    <idcible>0</idcible>
+                    <ratio>4</ratio>
+                    <typeratio>ange</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>pallier3_cerbere</name>
+                    <logo>pallier3_cerbere.jpg</logo>
+                    <seuil>75.00</seuil>
+                    <idcible>1</idcible>
+                    <ratio>2</ratio>
+                    <typeratio>vitesse</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+            </palliers>
+        </product>
+        <product>
+            <id>2</id>
+            <name>Haut élémentaire</name>
+            <logo>haut_élémentaire.jpg</logo>
+            <cout>60.00</cout>
+            <croissance>1.15</croissance>
+            <revenu>60.00</revenu>
+            <vitesse>3000</vitesse>
+            <quantite>0</quantite>
+            <timeleft>3000</timeleft>
+            <managerUnlocked>false</managerUnlocked>
+            <palliers>
+                <pallier>
+                    <name>pallier1_haut_elementaire</name>
+                    <logo>pallier1_haut_elementaire.jpg</logo>
+                    <seuil>10.00</seuil>
+                    <idcible>2</idcible>
+                    <ratio>2</ratio>
+                    <typeratio>gain</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>pallier2_haut_elementaire</name>
+                    <logo>pallier2_haut_elementaire.jpg</logo>
+                    <seuil>25.00</seuil>
+                    <idcible>1</idcible>
+                    <ratio>2</ratio>
+                    <typeratio>gain</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>pallier3_haut_elementaire</name>
+                    <logo>pallier3_haut_elementaire.jpg</logo>
+                    <seuil>75.00</seuil>
+                    <idcible>0</idcible>
+                    <ratio>10</ratio>
+                    <typeratio>vitesse</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+            </palliers>
+        </product>
+    </products>
+    <allunlocks>
+    </allunlocks>
+    <upgrades>
+    </upgrades>
+    <angelupgrades>
+    </angelupgrades>
+    <managers>
+    </managers>
+
+</world>
