@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/Users/agodfrin/Downloads/ISIS_Capitalist_Server/XmlSchema.xsd" uri="src/main/resources/jaxb/Classes/XmlSchema.xsd"/>
+</catalog>
