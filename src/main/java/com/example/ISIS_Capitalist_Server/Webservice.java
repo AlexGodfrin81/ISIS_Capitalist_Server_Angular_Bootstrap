@@ -17,6 +17,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.xml.bind.JAXBException;
 
+@Path("generic")
 public class Webservice {
 
     Services services;
@@ -27,7 +28,7 @@ public class Webservice {
 
     @GET
     @Path("world")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response getWorld() throws JAXBException {
         return Response.ok(services.getWorld()).build();
     }

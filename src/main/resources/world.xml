@@ -8,7 +8,7 @@ and open the template in the editor.
 
 <world
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-    xsi:noNamespaceSchemaLocation='jaxb/Classes/XmlSchema.xsd'>
+    xsi:noNamespaceSchemaLocation='../xsd/XmlSchema.xsd'>
     <name>Summoners War</name>
     <logo>summoners_war.jpg</logo>
     <money>0.0</money>
@@ -16,7 +16,7 @@ and open the template in the editor.
     <totalangels>0.0</totalangels>
     <activeangels>0.0</activeangels>
     <angelbonus>0</angelbonus>
-    <lastupdate>0.0</lastupdate>
+    <lastupdate>0</lastupdate>
     <products>
         <product>
             <id>1</id>
@@ -104,7 +104,6 @@ and open the template in the editor.
     <allunlocks>
     </allunlocks>
     <upgrades>
-        <palliers>
             <pallier>
                 <name>upgrade_cerbere0</name>
                 <logo>cerbere.jpg</logo>
@@ -186,10 +185,8 @@ and open the template in the editor.
                 <typeratio>vitesse</typeratio>
                 <unlocked>false</unlocked>
             </pallier>
-        </palliers>
     </upgrades>
     <angelupgrades>
-        <palliers>
             <pallier>
                 <name>upgrade_angel0</name>
                 <logo>cerbere.jpg</logo>
@@ -217,10 +214,8 @@ and open the template in the editor.
                 <typeratio>gain</typeratio>
                 <unlocked>false</unlocked>
             </pallier>
-        </palliers>
     </angelupgrades>
     <managers>
-        <palliers>
             <pallier>
                 <name>manager_cerbère</name>
                 <logo>manager_cerbere.jpg</logo>
@@ -239,6 +234,5 @@ and open the template in the editor.
                 <typeratio>vitesse</typeratio>
                 <unlocked>false</unlocked>
             </pallier>
-        </palliers>
     </managers>
 </world>

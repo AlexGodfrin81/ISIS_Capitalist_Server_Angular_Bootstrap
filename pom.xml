@@ -16,12 +16,34 @@
     <properties>
         <java.version>1.8</java.version>
     </properties>
+      <!-- force https -->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jersey</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -33,11 +55,35 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency> 
+            <groupId>org.glassfish.jaxb</groupId> 
+            <artifactId>jaxb-runtime</artifactId> 
+            <version>2.3.3</version> 
+        </dependency> 
+ 
+        <dependency> 
+            <groupId>org.glassfish.jaxb</groupId> 
+            <artifactId>jaxb-core</artifactId> 
+            <version>2.3.0.1</version> 
+        </dependency> 
     </dependencies>
         
 
     <build>
         <plugins>
+            <plugin> 
+                <groupId>org.codehaus.mojo</groupId> 
+                <artifactId>jaxb2-maven-plugin</artifactId> 
+                <version>2.5.0</version> 
+                <executions> 
+                    <execution> 
+                        <id>xjc</id> 
+                        <goals> 
+                            <goal>xjc</goal> 
+                        </goals> 
+                    </execution> 
+                </executions> 
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -75,25 +121,7 @@
             </plugin>
         </plugins>
     </build>
-    <!-- force https -->
-    <repositories>
-        <repository>
-            <id>central</id>
-            <url>https://repo1.maven.org/maven2</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>central</id>
-            <url>https://repo1.maven.org/maven2</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
+  
 
 
 </project>

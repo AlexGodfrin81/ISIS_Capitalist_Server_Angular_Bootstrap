@@ -5,8 +5,8 @@
  */
 package com.example.ISIS_Capitalist_Server;
 
-import generated.World;
-import java.io.File;
+import com.example.ISIS_Capitalist_Server.generated.World;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStream;
