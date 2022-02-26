@@ -21,7 +21,7 @@ and open the template in the editor.
         <product>
             <id>1</id>
             <name>Cerbère</name>
-            <logo>cerbere.jpg</logo>
+            <logo>cerbere.png</logo>
             <cout>4.0</cout>
             <croissance>1.07</croissance>
             <revenu>1.00</revenu>
