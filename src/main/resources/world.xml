@@ -10,7 +10,7 @@ and open the template in the editor.
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
     xsi:noNamespaceSchemaLocation='../xsd/XmlSchema.xsd'>
     <name>Summoners War</name>
-    <logo>summoners_war.jpg</logo>
+    <logo>logo.png</logo>
     <money>0.0</money>
     <score>0.0</score>
     <totalangels>0.0</totalangels>
@@ -62,7 +62,7 @@ and open the template in the editor.
         <product>
             <id>2</id>
             <name>Haut élémentaire</name>
-            <logo>haut_elementaire.jpg</logo>
+            <logo>haut_elementaire1.png</logo>
             <cout>60.00</cout>
             <croissance>1.15</croissance>
             <revenu>60.00</revenu>
@@ -95,6 +95,170 @@ and open the template in the editor.
                     <seuil>75.00</seuil>
                     <idcible>0</idcible>
                     <ratio>10</ratio>
+                    <typeratio>vitesse</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+            </palliers>
+        </product>
+        <product>
+            <id>3</id>
+            <name>Captain Pirate</name>
+            <logo>captain_pirate.png</logo>
+            <cout>4.0</cout>
+            <croissance>1.07</croissance>
+            <revenu>1.00</revenu>
+            <vitesse>500</vitesse>
+            <quantite>1</quantite>
+            <timeleft>500</timeleft>
+            <managerUnlocked>false</managerUnlocked>
+            <palliers>
+                <pallier>
+                    <name>pallier1_captain_pirate</name>
+                    <logo>pallier1_captain_pirate.png</logo>
+                    <seuil>10.00</seuil>
+                    <idcible>1</idcible>
+                    <ratio>2</ratio>
+                    <typeratio>gain</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>pallier2_captain_pirate</name>
+                    <logo>pallier2_captain_pirate.png</logo>
+                    <seuil>25.00</seuil>
+                    <idcible>0</idcible>
+                    <ratio>4</ratio>
+                    <typeratio>ange</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>pallier3_captain_pirate</name>
+                    <logo>pallier3_captain_pirate.png</logo>
+                    <seuil>75.00</seuil>
+                    <idcible>1</idcible>
+                    <ratio>2</ratio>
+                    <typeratio>vitesse</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+            </palliers>
+        </product>
+        <product>
+            <id>4</id>
+            <name>Fairy King</name>
+            <logo>fairy_king_unawakened.png</logo>
+            <cout>4.0</cout>
+            <croissance>1.07</croissance>
+            <revenu>1.00</revenu>
+            <vitesse>500</vitesse>
+            <quantite>1</quantite>
+            <timeleft>500</timeleft>
+            <managerUnlocked>false</managerUnlocked>
+            <palliers>
+                <pallier>
+                    <name>pallier1_fairy_king</name>
+                    <logo>pallier1_fairy_king_unawakened.png</logo>
+                    <seuil>10.00</seuil>
+                    <idcible>1</idcible>
+                    <ratio>2</ratio>
+                    <typeratio>gain</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>pallier2_fairy_king</name>
+                    <logo>pallier2_fairy_king_unawakened.png</logo>
+                    <seuil>25.00</seuil>
+                    <idcible>0</idcible>
+                    <ratio>4</ratio>
+                    <typeratio>ange</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>pallier3_fairy_king</name>
+                    <logo>pallier3_fairy_king_awakened.png</logo>
+                    <seuil>75.00</seuil>
+                    <idcible>1</idcible>
+                    <ratio>2</ratio>
+                    <typeratio>vitesse</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+            </palliers>
+        </product>
+        <product>
+            <id>5</id>
+            <name>Water epikon priest</name>
+            <logo>water_epikon_priest.png</logo>
+            <cout>4.0</cout>
+            <croissance>1.07</croissance>
+            <revenu>1.00</revenu>
+            <vitesse>500</vitesse>
+            <quantite>1</quantite>
+            <timeleft>500</timeleft>
+            <managerUnlocked>false</managerUnlocked>
+            <palliers>
+                <pallier>
+                    <name>pallier1_water_epikon</name>
+                    <logo>pallier1_water_epikon_priest.png</logo>
+                    <seuil>10.00</seuil>
+                    <idcible>1</idcible>
+                    <ratio>2</ratio>
+                    <typeratio>gain</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>pallier2_water_epikon</name>
+                    <logo>pallier2_water_epikon_priest.png</logo>
+                    <seuil>25.00</seuil>
+                    <idcible>0</idcible>
+                    <ratio>4</ratio>
+                    <typeratio>ange</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>pallier3_water_epikon</name>
+                    <logo>pallier3_water_epikon_priest.png</logo>
+                    <seuil>75.00</seuil>
+                    <idcible>1</idcible>
+                    <ratio>2</ratio>
+                    <typeratio>vitesse</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+            </palliers>
+        </product>
+        <product>
+            <id>6</id>
+            <name>Sky dancer</name>
+            <logo>sky_dancer_unawakened.png</logo>
+            <cout>4.0</cout>
+            <croissance>1.07</croissance>
+            <revenu>1.00</revenu>
+            <vitesse>500</vitesse>
+            <quantite>1</quantite>
+            <timeleft>500</timeleft>
+            <managerUnlocked>false</managerUnlocked>
+            <palliers>
+                <pallier>
+                    <name>pallier1_sky_dancer</name>
+                    <logo>pallier1_sky_dancer_unawakened.png</logo>
+                    <seuil>10.00</seuil>
+                    <idcible>1</idcible>
+                    <ratio>2</ratio>
+                    <typeratio>gain</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>pallier2_sky_dancer</name>
+                    <logo>pallier2_sky_dancer_unawakened.png</logo>
+                    <seuil>25.00</seuil>
+                    <idcible>0</idcible>
+                    <ratio>4</ratio>
+                    <typeratio>ange</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
+                    <name>pallier3_sky_dancer</name>
+                    <logo>pallier3_sky_dancer_unawakened.png</logo>
+                    <seuil>75.00</seuil>
+                    <idcible>1</idcible>
+                    <ratio>2</ratio>
                     <typeratio>vitesse</typeratio>
                     <unlocked>false</unlocked>
                 </pallier>
