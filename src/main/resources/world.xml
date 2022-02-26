@@ -185,7 +185,7 @@ and open the template in the editor.
         <product>
             <id>5</id>
             <name>Water epikon priest</name>
-            <logo>water_epikon_priest.png</logo>
+            <logo>water_epikon_priest_unawakened.png</logo>
             <cout>4.0</cout>
             <croissance>1.07</croissance>
             <revenu>1.00</revenu>
