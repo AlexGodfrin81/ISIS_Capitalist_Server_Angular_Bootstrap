@@ -62,7 +62,7 @@ and open the template in the editor.
         <product>
             <id>2</id>
             <name>Haut élémentaire</name>
-            <logo>haut_elementaire1.png</logo>
+            <logo>haut_elementaire.png</logo>
             <cout>60.00</cout>
             <croissance>1.15</croissance>
             <revenu>60.00</revenu>
