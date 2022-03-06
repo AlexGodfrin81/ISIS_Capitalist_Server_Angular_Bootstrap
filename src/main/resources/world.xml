@@ -381,8 +381,8 @@ and open the template in the editor.
     </angelupgrades>
     <managers>
             <pallier>
-                <name>manager_cerbère</name>
-                <logo>manager_cerbere.jpg</logo>
+                <name>Manager de cerbère</name>
+                <logo>manager_cerbere.png</logo>
                 <seuil>1000</seuil>
                 <idcible>1</idcible>
                 <ratio>2</ratio>
@@ -390,13 +390,51 @@ and open the template in the editor.
                 <unlocked>false</unlocked>
             </pallier>
             <pallier>
-                <name>manager_haut_elementaire</name>
-                <logo>manager_haut_elementaire.jpg</logo>
+                <name>Manager de haut elementaire</name>
+                <logo>manager_haut_elementaire.png</logo>
                 <seuil>15000</seuil>
                 <idcible>2</idcible>
                 <ratio>3</ratio>
                 <typeratio>vitesse</typeratio>
                 <unlocked>false</unlocked>
             </pallier>
+            <pallier>
+                <name>Manager de Fairy King</name>
+                <logo>manager_fairy_king.png</logo>
+                <seuil>15000</seuil>
+                <idcible>2</idcible>
+                <ratio>3</ratio>
+                <typeratio>vitesse</typeratio>
+                <unlocked>false</unlocked>
+            </pallier>
+            <pallier>
+                <name>manager de Sky Dancer</name>
+                <logo>manager_sky_dancer.png</logo>
+                <seuil>15000</seuil>
+                <idcible>2</idcible>
+                <ratio>3</ratio>
+                <typeratio>vitesse</typeratio>
+                <unlocked>false</unlocked>
+            </pallier>
+            <pallier>
+                <name>manager de Water Epikon</name>
+                <logo>manager_water_epikon.png</logo>
+                <seuil>15000</seuil>
+                <idcible>2</idcible>
+                <ratio>3</ratio>
+                <typeratio>vitesse</typeratio>
+                <unlocked>false</unlocked>
+            </pallier>
+            <pallier>
+                <name>manager de Captain Pirate</name>
+                <logo>manager_captain_pirate.png</logo>
+                <seuil>15000</seuil>
+                <idcible>2</idcible>
+                <ratio>3</ratio>
+                <typeratio>vitesse</typeratio>
+                <unlocked>false</unlocked>
+            </pallier>
+            
+           
     </managers>
 </world>
