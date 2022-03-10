@@ -22,23 +22,26 @@ import javax.xml.bind.Unmarshaller;
  */
 public class Services {
     
-    public World readWorldFromXml() throws JAXBException {
+    public World readWorldFromXml(String pseudo) throws JAXBException {
         JAXBContext cont = JAXBContext.newInstance(World.class);
         Unmarshaller u = cont.createUnmarshaller();
-        InputStream input = getClass().getClassLoader().getResourceAsStream("world.xml");
+        InputStream input = getClass().getClassLoader().getResourceAsStream(pseudo+"-world.xml");
+        if (input == null){
+            input = getClass().getClassLoader().getResourceAsStream("world.xml");
+        }
         World w = (World) u.unmarshal(input);
         return w;
     }
     
-    public void saveWorldToXml(World world) throws JAXBException, FileNotFoundException {
+    public void saveWorldToXml(String pseudo, World world) throws JAXBException, FileNotFoundException {
         JAXBContext cont = JAXBContext.newInstance(World.class);
         Marshaller m = cont.createMarshaller();
-        OutputStream output = new FileOutputStream("world.xml");
+        OutputStream output = new FileOutputStream(pseudo+"-world.xml");
         m.marshal(world, output);
     }
     
-    public World getWorld() throws JAXBException {
-        return readWorldFromXml();
+    public World getWorld(String pseudo) throws JAXBException {
+        return readWorldFromXml(pseudo);
     }
     
 }
