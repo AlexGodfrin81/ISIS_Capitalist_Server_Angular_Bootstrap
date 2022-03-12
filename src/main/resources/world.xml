@@ -402,7 +402,7 @@ and open the template in the editor.
                 <name>Manager de Fairy King</name>
                 <logo>manager_fairy_king.png</logo>
                 <seuil>20</seuil>
-                <idcible>2</idcible>
+                <idcible>4</idcible>
                 <ratio>3</ratio>
                 <typeratio>vitesse</typeratio>
                 <unlocked>false</unlocked>
@@ -411,7 +411,7 @@ and open the template in the editor.
                 <name>manager de Sky Dancer</name>
                 <logo>manager_sky_dancer.png</logo>
                 <seuil>20</seuil>
-                <idcible>2</idcible>
+                <idcible>6</idcible>
                 <ratio>3</ratio>
                 <typeratio>vitesse</typeratio>
                 <unlocked>false</unlocked>
@@ -420,7 +420,7 @@ and open the template in the editor.
                 <name>manager de Water Epikon</name>
                 <logo>manager_water_epikon.png</logo>
                 <seuil>20</seuil>
-                <idcible>2</idcible>
+                <idcible>5</idcible>
                 <ratio>3</ratio>
                 <typeratio>vitesse</typeratio>
                 <unlocked>false</unlocked>
@@ -429,7 +429,7 @@ and open the template in the editor.
                 <name>manager de Captain Pirate</name>
                 <logo>manager_captain_pirate.png</logo>
                 <seuil>30</seuil>
-                <idcible>2</idcible>
+                <idcible>3</idcible>
                 <ratio>3</ratio>
                 <typeratio>vitesse</typeratio>
                 <unlocked>false</unlocked>
