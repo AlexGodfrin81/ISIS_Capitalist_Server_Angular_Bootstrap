@@ -266,6 +266,15 @@ and open the template in the editor.
         </product>
     </products>
     <allunlocks>
+            <pallier>
+                <name>unlock_cerbere0</name>
+                <logo>cerbere.png</logo>
+                <seuil>10</seuil>
+                <idcible>1</idcible>
+                <ratio>2</ratio>
+                <typeratio>gain</typeratio>
+                <unlocked>false</unlocked>
+            </pallier>
     </allunlocks>
     <upgrades>
             <pallier>

@@ -8,6 +8,7 @@ package com.example.ISIS_Capitalist_Server;
 import com.example.ISIS_Capitalist_Server.generated.PallierType;
 import com.example.ISIS_Capitalist_Server.generated.ProductType;
 import com.example.ISIS_Capitalist_Server.generated.ProductsType;
+import com.example.ISIS_Capitalist_Server.generated.TyperatioType;
 import com.example.ISIS_Capitalist_Server.generated.World;
 import java.io.File;
 
@@ -33,7 +34,7 @@ public class Services {
         JAXBContext cont = JAXBContext.newInstance(World.class);
         Unmarshaller u = cont.createUnmarshaller();
         World world;
-        
+
         /*InputStream input = getClass().getClassLoader().getResourceAsStream(pseudo + "-world.xml");
         if (input == null) {
             input = getClass().getClassLoader().getResourceAsStream("world.xml");
@@ -41,7 +42,7 @@ public class Services {
         world = (World) u.unmarshal(input);
         updateScore(world);
         return world;*/
-             if (new File(username + "_world.xml").exists()) {
+        if (new File(username + "_world.xml").exists()) {
             System.out.println("find !");
             world = (World) u.unmarshal(new File(username + "_world.xml"));
         } else {
@@ -52,18 +53,18 @@ public class Services {
         updateScore(world);
         saveWorldToXml(world, username);
         return world;
-        
+
     }
 
     public void saveWorldToXml(World world, String username) throws JAXBException, FileNotFoundException {
-          JAXBContext cont = JAXBContext.newInstance(World.class);
-             Marshaller m = cont.createMarshaller();
-             OutputStream output = new FileOutputStream(username + "-world.xml");
+        JAXBContext cont = JAXBContext.newInstance(World.class);
+        Marshaller m = cont.createMarshaller();
+        OutputStream output = new FileOutputStream(username + "-world.xml");
         m.marshal(world, output);
     }
 
     public World getWorld(String username) throws JAXBException, FileNotFoundException {
-        World w =  this.readWorldFromXml(username);
+        World w = this.readWorldFromXml(username);
         this.updateScore(w);
         w.setLastupdate(System.currentTimeMillis());
         this.saveWorldToXml(w, username);
@@ -78,7 +79,7 @@ public class Services {
         }
         return null;
     }
-    
+
     public PallierType findManagerByName(World world, String name) {
         for (PallierType m : world.getManagers().getPallier()) {
             if (m.getName().equals(name)) {
@@ -110,9 +111,9 @@ public class Services {
             if (qtchange > 0) {
                 // soustraire de l'argent du joueur le cout de la quantité
                 // achetée et mettre à jour la quantité de product
-               // world.setMoney(world.getMoney() - (product.getCout() * qtchange));
-              world.setMoney(world.getMoney() - (getRealPrice(product) * ((1- Math.pow(product.getCroissance(), qtchange)) / 1- product.getCroissance())));
-               product.setQuantite(product.getQuantite() + qtchange);
+                // world.setMoney(world.getMoney() - (product.getCout() * qtchange));
+                world.setMoney(world.getMoney() - (getRealPrice(product) * ((1 - Math.pow(product.getCroissance(), qtchange)) / 1 - product.getCroissance())));
+                product.setQuantite(product.getQuantite() + qtchange);
             } else {
                 // initialiser product.timeleft à product.vitesse
                 // pour lancer la production
@@ -125,12 +126,12 @@ public class Services {
         } catch (JAXBException ex) {
             Logger.getLogger(Services.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+        return true;
     }
-    
-    private double getRealPrice(ProductType p){
+
+    private double getRealPrice(ProductType p) {
         Double d;
-        d = p.getCout()*Math.pow(p.getCroissance(), p.getQuantite());
+        d = p.getCout() * Math.pow(p.getCroissance(), p.getQuantite());
         return d;
     }
 
@@ -144,14 +145,36 @@ public class Services {
             // trouver dans ce monde, le manager équivalent à celui passé
             // en paramètre
             PallierType manager_found = findManagerByName(world, newmanager.getName());
+            if(manager_found == null || manager_found.isUnlocked()){
+                return false;
+            }
+            ProductType product = findProductById(world, manager_found.getIdcible());
+            if(product == null){
+                return false;
+            }
+            
+            //Vérifier si joueur a assez d'argent
+            if(world.getMoney() < manager_found.getSeuil()){
+            return false;
+        }
+      
+            //Unlock manager 
             manager_found.setUnlocked(true);
-            return true;
+            
+            // Marqué produit comme managé 
+            product.setManagerUnlocked(true);
+            saveWorldToXml(world, username);
+            
+            //application bonus 
+            world.setMoney(world.getMoney()-manager_found.getSeuil());
+            applyBonus(world, manager_found);
+            
         } catch (JAXBException ex) {
             Logger.getLogger(Services.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+        return true;
     }
-    
+
     @SuppressWarnings("empty-statement")
     public Boolean updateScore(World world) throws FileNotFoundException {
         /*long temps_ecoule = System.currentTimeMillis() - world.getLastupdate();
@@ -171,27 +194,79 @@ public class Services {
         return false;*/
         ProductsType products = world.getProducts();
         List<ProductType> listProducts = products.getProduct();
-        for (ProductType p : listProducts){
-            if (p.isManagerUnlocked()){
-                long temps_ecoule = System.currentTimeMillis()-world.getLastupdate();
-                long money=(int)temps_ecoule/p.getVitesse();
-                world.setMoney(world.getMoney()+(p.getRevenu()*money));
-                System.out.println(world.getMoney());
-            }else{
-                if(p.getQuantite()>0){
-                if(p.getTimeleft()!= 0&&p.getTimeleft()<System.currentTimeMillis()-world.getLastupdate()){
-                     
-                    System.out.println("money"+ world.getMoney()+"reven"+p.getRevenu());
-                    world.setMoney(world.getMoney()+p.getRevenu());
-                }else
-                    p.setTimeleft(0);
-               
-            }}
+        for (ProductType p : listProducts) {
+            if (p.isManagerUnlocked()) {
+                long temps_ecoule = System.currentTimeMillis() - world.getLastupdate();
+                long money = (int) temps_ecoule / p.getVitesse();
+                world.setMoney(world.getMoney() + (p.getRevenu() * money));
+                
+            } else {
+                if (p.getQuantite() > 0) {
+                    if (p.getTimeleft() != 0 && p.getTimeleft() < System.currentTimeMillis() - world.getLastupdate()) {
+
+                        System.out.println("money" + world.getMoney() + "reven" + p.getRevenu());
+                        world.setMoney(world.getMoney() + p.getRevenu());
+                    } else {
+                        p.setTimeleft(0);
+                    }
+
+                }
+            }
         }
         world.setLastupdate(System.currentTimeMillis());
         return false;
-        
     }
-    
-    
+
+        /*
+	 Applique bonus des upgrades, unlocks et managers	
+	 */
+	public void applyBonus(World world, PallierType pallier) {
+		
+		int bonusVitesse = 1;
+		int bonusGain = 1;
+		int bonusAnge = 0;
+		
+		int idCible = pallier.getIdcible();
+		
+		if( pallier.getTyperatio() == TyperatioType.ANGE ) {
+			bonusAnge = (int) pallier.getRatio();
+			world.setAngelbonus(bonusAnge);
+		} else {
+			if( pallier.getTyperatio() == TyperatioType.VITESSE ) {
+				bonusVitesse = (int) pallier.getRatio();
+			}
+			if( pallier.getTyperatio() == TyperatioType.GAIN ) {
+				bonusGain = (int) pallier.getRatio();
+			}
+			
+			
+			List<ProductType> worldProducts = world.getProducts().getProduct();
+
+			if(idCible==0) {
+				for(int p=0; p<worldProducts.size(); p++) {
+					worldProducts.get(p).setVitesse( worldProducts.get(p).getVitesse()/bonusVitesse );
+					worldProducts.get(p).setRevenu( worldProducts.get(p).getRevenu()*bonusGain );
+					System.out.println("\tP: " + worldProducts.get(p).getName() + " " + pallier.getRatio() + " " +pallier.getTyperatio());
+				}
+			} else {
+				for(int p=0; p<worldProducts.size(); p++) {
+					if( worldProducts.get(p).getId() == idCible) {
+						worldProducts.get(p).setVitesse( worldProducts.get(p).getVitesse()/bonusVitesse );
+						worldProducts.get(p).setRevenu( worldProducts.get(p).getRevenu()*bonusGain );
+						System.out.println("\tP: " + worldProducts.get(p).getName() + " " + pallier.getRatio() + " " +pallier.getTyperatio());
+					}
+				}
+			}
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+	}
 }
