@@ -32,7 +32,7 @@ and open the template in the editor.
             <palliers>
                 <pallier>
                     <name>pallier1_cerbere</name>
-                    <logo>pallier1_cerbere.jpg</logo>
+                    <logo>pallier1_cerbere.png</logo>
                     <seuil>10.00</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -41,7 +41,7 @@ and open the template in the editor.
                 </pallier>
                 <pallier>
                     <name>pallier2_cerbere</name>
-                    <logo>pallier2_cerbere.jpg</logo>
+                    <logo>pallier2_cerbere.png</logo>
                     <seuil>25.00</seuil>
                     <idcible>0</idcible>
                     <ratio>4</ratio>
@@ -50,7 +50,7 @@ and open the template in the editor.
                 </pallier>
                 <pallier>
                     <name>pallier3_cerbere</name>
-                    <logo>pallier3_cerbere.jpg</logo>
+                    <logo>pallier3_cerbere.png</logo>
                     <seuil>75.00</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -73,7 +73,7 @@ and open the template in the editor.
             <palliers>
                 <pallier>
                     <name>pallier1_haut_elementaire</name>
-                    <logo>pallier1_haut_elementaire.jpg</logo>
+                    <logo>pallier1_haut_elementaire.png</logo>
                     <seuil>10.00</seuil>
                     <idcible>2</idcible>
                     <ratio>2</ratio>
@@ -82,7 +82,7 @@ and open the template in the editor.
                 </pallier>
                 <pallier>
                     <name>pallier2_haut_elementaire</name>
-                    <logo>pallier2_haut_elementaire.jpg</logo>
+                    <logo>pallier2_haut_elementaire.png</logo>
                     <seuil>25.00</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -91,7 +91,7 @@ and open the template in the editor.
                 </pallier>
                 <pallier>
                     <name>pallier3_haut_elementaire</name>
-                    <logo>pallier3_haut_elementaire.jpg</logo>
+                    <logo>pallier3_haut_elementaire.png</logo>
                     <seuil>75.00</seuil>
                     <idcible>0</idcible>
                     <ratio>10</ratio>
@@ -270,8 +270,8 @@ and open the template in the editor.
     <upgrades>
             <pallier>
                 <name>upgrade_cerbere0</name>
-                <logo>cerbere.jpg</logo>
-                <seuil>30000</seuil>
+                <logo>cerbere.png</logo>
+                <seuil>10</seuil>
                 <idcible>1</idcible>
                 <ratio>2</ratio>
                 <typeratio>gain</typeratio>
@@ -279,8 +279,8 @@ and open the template in the editor.
             </pallier>
             <pallier>
                 <name>upgrade_cerbere1</name>
-                <logo>cerbere.jpg</logo>
-                <seuil>100000</seuil>
+                <logo>cerbere.png</logo>
+                <seuil>20</seuil>
                 <idcible>1</idcible>
                 <ratio>2</ratio>
                 <typeratio>gain</typeratio>
@@ -288,8 +288,8 @@ and open the template in the editor.
             </pallier>
             <pallier>
                 <name>upgrade_cerbere2</name>
-                <logo>cerbere.jpg</logo>
-                <seuil>300000</seuil>
+                <logo>cerbere.png</logo>
+                <seuil>30</seuil>
                 <idcible>1</idcible>
                 <ratio>2</ratio>
                 <typeratio>gain</typeratio>
@@ -297,8 +297,8 @@ and open the template in the editor.
             </pallier>
             <pallier>
                 <name>upgrade_haut_elementaire0</name>
-                <logo>haut_elementaire.jpg</logo>
-                <seuil>75000</seuil>
+                <logo>haut_elementaire.png</logo>
+                <seuil>10</seuil>
                 <idcible>2</idcible>
                 <ratio>2</ratio>
                 <typeratio>gain</typeratio>
@@ -306,8 +306,8 @@ and open the template in the editor.
             </pallier>
             <pallier>
                 <name>upgrade_haut_elementaire1</name>
-                <logo>haut_elementaire.jpg</logo>
-                <seuil>200000</seuil>
+                <logo>haut_elementaire.png</logo>
+                <seuil>20</seuil>
                 <idcible>2</idcible>
                 <ratio>2</ratio>
                 <typeratio>gain</typeratio>
@@ -315,8 +315,8 @@ and open the template in the editor.
             </pallier>
             <pallier>
                 <name>upgrade_haut_elementaire2</name>
-                <logo>haut_elementaire.jpg</logo>
-                <seuil>1000000</seuil>
+                <logo>haut_elementaire.png</logo>
+                <seuil>30</seuil>
                 <idcible>2</idcible>
                 <ratio>2</ratio>
                 <typeratio>gain</typeratio>
@@ -324,8 +324,8 @@ and open the template in the editor.
             </pallier>
             <pallier>
                 <name>upgrade_general0</name>
-                <logo>monnaie.jpg</logo>
-                <seuil>500000</seuil>
+                <logo>monnaie.png</logo>
+                <seuil>10</seuil>
                 <idcible>0</idcible>
                 <ratio>2</ratio>
                 <typeratio>vitesse</typeratio>
@@ -333,8 +333,8 @@ and open the template in the editor.
             </pallier>
             <pallier>
                 <name>upgrade_general1</name>
-                <logo>monnaie.jpg</logo>
-                <seuil>3000000</seuil>
+                <logo>monnaie.png</logo>
+                <seuil>20</seuil>
                 <idcible>2</idcible>
                 <ratio>2</ratio>
                 <typeratio>vitesse</typeratio>
@@ -342,8 +342,8 @@ and open the template in the editor.
             </pallier>
             <pallier>
                 <name>upgrade_general2</name>
-                <logo>monnaie.jpg</logo>
-                <seuil>10000000</seuil>
+                <logo>monnaie.png</logo>
+                <seuil>30</seuil>
                 <idcible>2</idcible>
                 <ratio>2</ratio>
                 <typeratio>vitesse</typeratio>
@@ -353,7 +353,7 @@ and open the template in the editor.
     <angelupgrades>
             <pallier>
                 <name>upgrade_angel0</name>
-                <logo>cerbere.jpg</logo>
+                <logo>cerbere.png</logo>
                 <seuil>10000000</seuil>
                 <idcible>1</idcible>
                 <ratio>10</ratio>
@@ -362,7 +362,7 @@ and open the template in the editor.
             </pallier>
             <pallier>
                 <name>upgrade_angel1</name>
-                <logo>haut_elementaire.jpg</logo>
+                <logo>haut_elementaire.png</logo>
                 <seuil>10000000</seuil>
                 <idcible>2</idcible>
                 <ratio>10</ratio>
@@ -371,7 +371,7 @@ and open the template in the editor.
             </pallier>
             <pallier>
                 <name>upgrade_angel2</name>
-                <logo>angel.jpg</logo>
+                <logo>angel.png</logo>
                 <seuil>10000000</seuil>
                 <idcible>0</idcible>
                 <ratio>4</ratio>
